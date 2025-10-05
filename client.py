@@ -77,7 +77,7 @@ class Client:
 
   # Management of client-server connection and integration of GUI
 
-  def __inint__(self, host, port):
+  def __init__(self, host, port):
 
     self.host = host
     self.port = port
@@ -181,5 +181,6 @@ if __name__ == "__main__":
   parser.add_argument("-p", metavar="Port", type=int, default=1060, help="TCP port (default 1060)")
 
   args = parser.parse_args()
-
+  print(args.host)
+  print(args.p) 
   main(args.host, args.p)
